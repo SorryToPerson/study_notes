@@ -189,12 +189,12 @@ http://127.0.0.1:9000
 | 含义           | 语法                                                         | 重点掌握 |
 | :------------- | :----------------------------------------------------------- | :------- |
 | 请求方法       | `request.method`                                             | *****    |
-| 请求版本       | request.httpVersion                                          |          |
+| 请求版本       | `request.httpVersion`                                        |          |
 | 请求路径       | `request.url`                                                | *****    |
 | URL 路径       | `require('url').parse(request.url).pathname`                 | *****    |
 | URL 查询字符串 | `require('url').parse(request.url,  true).query`             | *****    |
 | 请求头         | `request.headers`                                            | *****    |
-| 请求体         | request.on('data', function(chunk){})<br>request.on('end', function(){}) |          |
+| 请求体         | `request.on('data', function(chunk){})`    `request.on('end', function(){})` |          |
 
 ```js
 // 1. 导入 http 模块
@@ -577,7 +577,7 @@ HTTP 服务在哪个文件夹中寻找静态资源，那个文件夹就是 <span
 
 > 思考：vscode 中使用 live-server 访问 HTML 时， 它启动的服务中网站根目录是谁？
 >
-> - 改文件的所处的文件夹
+> - 该文件的所处的文件夹
 
 ### 网页中的 **URL**
 
